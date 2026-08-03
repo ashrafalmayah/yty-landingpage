@@ -104,16 +104,6 @@
                         تواصل معنا وسيقوم فريقنا بالرد خلال ساعات العمل
                     </p>
 
-                    @if ($errors->any())
-                        <div class="mb-4 p-3 rounded-lg text-xs bg-red-50 text-red-600 border border-red-200">
-                            <ul class="list-disc list-inside space-y-1">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
                     <form action="{{ route('booking.store') }}" method="POST" class="space-y-4">
                         @csrf
                         <div>
@@ -127,8 +117,11 @@
                                 value="{{ old('name') }}"
                                 placeholder="أدخل اسمك الكامل"
                                 style="font-family: 'Tajawal', sans-serif;"
-                                class="w-full border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 bg-slate-50 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors"
+                                class="w-full border @error('name') border-red-500 bg-red-50/50 @else border-slate-200 bg-slate-50 @enderror rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors"
                             />
+                            @error('name')
+                                <p class="text-xs text-red-600 mt-1 font-semibold" style="font-family: 'Tajawal', sans-serif;">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
@@ -142,8 +135,11 @@
                                 value="{{ old('email') }}"
                                 placeholder="example@email.com"
                                 style="font-family: 'Tajawal', sans-serif; direction: ltr; text-align: right;"
-                                class="w-full border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 bg-slate-50 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors"
+                                class="w-full border @error('email') border-red-500 bg-red-50/50 @else border-slate-200 bg-slate-50 @enderror rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors"
                             />
+                            @error('email')
+                                <p class="text-xs text-red-600 mt-1 font-semibold" style="font-family: 'Tajawal', sans-serif;">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
@@ -155,10 +151,13 @@
                                 type="tel"
                                 name="phone"
                                 value="{{ old('phone') }}"
-                                placeholder="+967 7XX XXX XXX"
+                                placeholder="ادخل رقم الهاتف"
                                 style="font-family: 'Tajawal', sans-serif; direction: ltr; text-align: right;"
-                                class="w-full border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 bg-slate-50 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors"
+                                class="w-full border @error('phone') border-red-500 bg-red-50/50 @else border-slate-200 bg-slate-50 @enderror rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors"
                             />
+                            @error('phone')
+                                <p class="text-xs text-red-600 mt-1 font-semibold" style="font-family: 'Tajawal', sans-serif;">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
@@ -168,7 +167,7 @@
                             <textarea
                                 rows="3"
                                 name="notes"
-                                placeholder="مثال: أبحث عن مكتب خاص بدوام كامل، أو مقعد مشترك بالساعة..."
+                                placeholder="مثال: أبحث عن مكتب خاص بدوام كامل، أو مقعد مشترك..."
                                 style="font-family: 'Tajawal', sans-serif;"
                                 class="w-full border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 bg-slate-50 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors resize-y"
                             >{{ old('notes') }}</textarea>
