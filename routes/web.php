@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 // Public Routes
 Route::get('/', [BookingController::class, 'index'])->name('home');
+Route::view('/privacy', 'privacy')->name('privacy');
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 Route::post('/meta/contact', [BookingController::class, 'trackContact'])->name('meta.contact');
 
