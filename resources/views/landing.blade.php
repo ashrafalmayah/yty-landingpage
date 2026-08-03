@@ -408,18 +408,31 @@
                     </p>
                     <div class="flex gap-3 pt-1">
                         @foreach ([
-                            ['label' => 'واتساب', 'path' => 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z'],
-                            ['label' => 'تويتر', 'path' => 'M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z'],
-                            ['label' => 'لينكدإن', 'path' => 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 100-4 2 2 0 000 4z']
+                            [
+                                'label' => 'WhatsApp',
+                                'url' => 'https://wa.me/967775076672',
+                                'svg' => '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 13.5c-.3-.2-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.3-.6.8-.8 1-.1.1-.3.2-.6.1-1-.4-1.9-1.2-2.6-2.1-.2-.3 0-.4.1-.6l.4-.5c.1-.1.1-.3 0-.4L10 8.5c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.6.1-.8.4-.7.8-.7 2 0 3.2 1.2 2 3.1 3.8 5.3 4.6 1.4.5 2.4.4 3.1.2.5-.1 1.2-.6 1.4-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z" fill="white" stroke="none"/>'
+                            ],
+                            [
+                                'label' => 'Facebook',
+                                'url' => 'https://www.facebook.com/yementechyouth',
+                                'svg' => '<path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+                            ],
+                            [
+                                'label' => 'Instagram',
+                                'url' => 'https://www.instagram.com/yty.yemen',
+                                'svg' => '<rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/>'
+                            ]
                         ] as $social)
                             <a
-                                href="#"
+                                href="{{ $social['url'] }}"
+                                onclick="if(window.trackMetaContact){ trackMetaContact('{{ $social['label'] }}', this.href); return false; }"
                                 aria-label="{{ $social['label'] }}"
                                 style="background-color: rgba(255,255,255,0.08);"
                                 class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-[#1797B8]"
                             >
-                                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="{{ $social['path'] }}" />
+                                <svg viewBox="0 0 24 24" class="w-4 h-4">
+                                    {!! $social['svg'] !!}
                                 </svg>
                             </a>
                         @endforeach
@@ -436,12 +449,12 @@
                             </svg>
                             <span>صنعاء، شارع بغداد - خلف مستشفى المتوكل، مركز YTY للأعمال</span>
                         </div>
-                        <div class="flex items-start gap-3">
+                        <a href="tel:+967775076672" onclick="if(window.trackMetaContact){ trackMetaContact('Phone Call', this.href); }" class="flex items-start gap-3 hover:text-[#1797B8] transition-colors">
                             <svg viewBox="0 0 24 24" class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="#1797B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                             <span dir="ltr">+967 775 076 672</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
