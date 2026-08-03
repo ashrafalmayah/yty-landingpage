@@ -293,69 +293,75 @@
                     $testimonials = [
                         [
                             'name' => 'أيمن',
-                            'title' => 'رائد أعمال',
+                            'title' => 'مؤسس VarShop',
                             'photo' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'كنت أعمل 5 إعلانات بصعوبة، واليوم 80 إعلان بكل متعة. مبيعاتي قفزت من 10 آلاف إلى 4 ملايين. البيئة المناسبة والرواد الطموحون بجانبي صنعوا الفرق.',
                         ],
                         [
                             'name' => 'سعاد',
-                            'title' => 'رائدة أعمال',
+                            'title' => 'مصورة',
                             'photo' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'بيئة عمل مريحة وخدمات متكاملة ساعدتني على التركيز في عملي. أنصح بالمركز لكل رائد أعمال.',
                         ],
                         [
                             'name' => 'حنان',
-                            'title' => 'مصممة واجهات',
+                            'title' => 'خدمات لوجستية',
                             'photo' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'المكاتب مجهزة بشكل ممتاز، وفريق العمل متعاون واحترافي. تجربة رائعة بكل المقاييس.',
                         ],
                         [
                             'name' => 'هديل',
-                            'title' => 'مديرة مشاريع',
+                            'title' => 'IT',
                             'photo' => 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'مكان هادئ ومنظم، مناسب للاجتماعات والعمل اليومي. سعيدة باختياري لـ YTY.',
                         ],
                         [
                             'name' => 'وسيم',
-                            'title' => 'مطور برمجيات',
+                            'title' => 'مؤسس Done',
                             'photo' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'وفرت عليّ الكثير من الوقت والجهد، وكل الخدمات التي أحتاجها متوفرة في مكان واحد.',
                         ],
                         [
                             'name' => 'باسل',
-                            'title' => 'صانع محتوى',
+                            'title' => 'Freelancer',
                             'photo' => 'https://images.unsplash.com/photo-1543949806-2c9935e6aa78?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'أفضل ما يميز المركز هو جاهزية المكاتب وجودة بيئة العمل، مما ساعدني على بدء عملي بسرعة.',
                         ],
                         [
                             'name' => 'رامي',
-                            'title' => 'مستشار تسويق',
+                            'title' => 'مصمم',
                             'photo' => 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'قاعات الاجتماعات مجهزة بشكل احترافي، وكانت تجربة ممتازة في استقبال العملاء.',
                         ],
                         [
                             'name' => 'حسام',
-                            'title' => 'مؤسس شركة ناشئة',
+                            'title' => 'صاحب مشروع ماركتيرلك للتسويق',
                             'photo' => 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'بيئة احترافية وأسعار مناسبة، مع اهتمام واضح براحة العملاء وجودة الخدمات.',
                         ],
                         [
                             'name' => 'معتصم',
-                            'title' => 'مستشار مالي',
+                            'title' => 'علاقات عامة وتسويق',
                             'photo' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'مركز متكامل يوفر كل ما يحتاجه أصحاب المشاريع، وأنصح به لكل من يبحث عن بيئة عمل مناسبة.',
                         ],
                         [
                             'name' => 'خلود',
-                            'title' => 'مهندسة برمجيات',
+                            'title' => 'كاتبه محتوى',
                             'photo' => 'https://images.unsplash.com/photo-1701096374092-bb70915fdc5c?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'أعجبني التنظيم والاهتمام بالتفاصيل، والمكان يمنح انطباعًا احترافيًا منذ أول زيارة.',
                         ],
                         [
                             'name' => 'لميس',
-                            'title' => 'أخصائية تسويق',
+                            'title' => 'مهندسة ديكور',
                             'photo' => 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&auto=format',
                             'quote' => 'تجربة مميزة من حيث جودة المرافق وسهولة التعامل، وأتطلع للاستمرار مع YTY.',
+                        ],
+                        [
+                            'name' => 'يوسف',
+                            'title' => 'صاحب مكتب سفريات',
+                            'photo' => 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&auto=format',
+                            'quote' => 'قبل YTY كنت أقضي وقت كبير في تجهيز مكان العمل ومتابعة التفاصيل التشغيلية، أما اليوم انا مركز بشكل أكبر على تطوير خدماتي وخدمة عملائي... المكتب ساعدني على بناء ثقة أكبر مع العملاء وتحسين صورة مشروعي',
                         ],
                     ];
                 @endphp
@@ -457,30 +463,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Working hours -->
-                <div>
-                    <h4 class="text-white text-base font-bold mb-4">ساعات العمل</h4>
-                    <div style="font-family: 'Tajawal', sans-serif;" class="space-y-2 text-xs text-[#8aabc8]">
-                        <div class="flex justify-between">
-                            <span>الأحد – الخميس</span>
-                            <span style="color: #1797B8;">8:00 ص – 9:00 م</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>السبت</span>
-                            <span style="color: #1797B8;">10:00 ص – 6:00 م</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>الجمعة</span>
-                            <span style="color: #5a7090;">مغلق</span>
-                        </div>
-                    </div>
-                    <div style="background-color: rgba(23,151,184,0.12); border: 1px solid rgba(23,151,184,0.25);" class="mt-5 rounded-xl p-3">
-                        <p style="color: #1797B8; font-family: 'Tajawal', sans-serif;" class="text-xs leading-relaxed">
-                            تتوفر مساحات محدودة. احجز مكانك اليوم لتضمن حصولك على المكتب المناسب.
-                        </p>
-                    </div>
-                </div>
             </div>
 
             <!-- Bottom bar -->
@@ -489,8 +471,7 @@
                     © {{ date('Y') }} YTY — Yemen Tech Youth. جميع الحقوق محفوظة.
                 </p>
                 <div style="font-family: 'Tajawal', sans-serif;" class="flex gap-4">
-                    <a href="#" class="hover:text-[#1797B8] transition-colors">سياسة الخصوصية</a>
-                    <a href="#" class="hover:text-[#1797B8] transition-colors">الشروط والأحكام</a>
+                    <a href="{{ route('privacy') }}" class="hover:text-[#1797B8] transition-colors">سياسة الخصوصية</a>
                 </div>
             </div>
         </div>
