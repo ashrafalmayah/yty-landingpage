@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use App\Models\Booking;
 
 class BookingTest extends TestCase
 {
@@ -35,7 +34,42 @@ class BookingTest extends TestCase
         $this->assertDatabaseHas('bookings', [
             'name' => 'أحمد علي',
             'email' => 'ahmed@example.com',
-            'phone' => '+967 770 123 456',
+            'phone' => '+967770123456',
+        ]);
+    }
+
+    public function test_phone_number_is_normalized_to_e164_format(): void
+    {
+        $bookingData = [
+            'name' => 'سارة محمد',
+            'email' => 'sara@example.com',
+            'phone' => '0770123456',
+            'notes' => 'اختبار تحويل الرقم المحلي',
+        ];
+
+        $response = $this->post('/booking', $bookingData);
+
+        $response->assertStatus(302);
+        $this->assertDatabaseHas('bookings', [
+            'email' => 'sara@example.com',
+            'phone' => '+967770123456',
+        ]);
+    }
+
+    public function test_booking_fails_for_non_yemeni_phone(): void
+    {
+        $bookingData = [
+            'name' => 'John Doe',
+            'email' => 'john@example.com',
+            'phone' => '+1 555 123 4567',
+            'notes' => 'Non-Yemeni number',
+        ];
+
+        $response = $this->post('/booking', $bookingData);
+
+        $response->assertSessionHasErrors(['phone']);
+        $this->assertDatabaseMissing('bookings', [
+            'email' => 'john@example.com',
         ]);
     }
 }
