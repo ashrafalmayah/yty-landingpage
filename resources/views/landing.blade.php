@@ -330,25 +330,25 @@
                         [
                             'name' => 'وسيم',
                             'title' => 'مؤسس Done',
-                            'photo' => '/images/male-avatar.svg',
+                            'photo' => '/images/people/done.webp',
                             'quote' => 'وفرت عليّ الكثير من الوقت والجهد، وكل الخدمات التي أحتاجها متوفرة في مكان واحد.',
                         ],
                         [
                             'name' => 'باسل',
                             'title' => 'Freelancer',
-                            'photo' => '/images/male-avatar.svg',
+                            'photo' => '/images/people/basel.webp',
                             'quote' => 'أفضل ما يميز المركز هو جاهزية المكاتب وجودة بيئة العمل، مما ساعدني على بدء عملي بسرعة.',
                         ],
                         [
                             'name' => 'رامي',
-                            'title' => 'مصمم',
+                            'title' => 'مصمم جرافيك',
                             'photo' => '/images/male-avatar.svg',
                             'quote' => 'قاعات الاجتماعات مجهزة بشكل احترافي، وكانت تجربة ممتازة في استقبال العملاء.',
                         ],
                         [
                             'name' => 'حسام',
-                            'title' => 'مؤسس ماركتيرلك للتسويق',
-                            'photo' => '/images/male-avatar.svg',
+                            'title' => 'مدير ماركتيرلك للتسويق',
+                            'photo' => '/images/people/husam.webp',
                             'quote' => 'بيئة احترافية وأسعار مناسبة، مع اهتمام واضح براحة العملاء وجودة الخدمات.',
                         ],
                         [
