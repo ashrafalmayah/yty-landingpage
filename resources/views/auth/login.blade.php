@@ -36,7 +36,7 @@
                     type="email"
                     name="email"
                     value="{{ old('email') }}"
-                    placeholder="admin@yty-incubator.com"
+                    placeholder="البريد الالكتروني"
                     style="font-family: 'Tajawal', sans-serif; direction: ltr; text-align: right;"
                     class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 bg-slate-50 focus:outline-none focus:border-[#1797B8] focus:bg-white transition-colors"
                 />
