@@ -104,6 +104,19 @@
                         تواصل معنا وسيقوم فريقنا بالرد خلال ساعات العمل
                     </p>
 
+                    @php
+                        $otherErrors = collect($errors->getMessages())->except(['name', 'email', 'phone'])->flatten();
+                    @endphp
+                    @if ($otherErrors->isNotEmpty())
+                        <div class="mb-4 p-3 rounded-lg text-xs bg-red-50 text-red-600 border border-red-200">
+                            <ul class="list-disc list-inside space-y-1">
+                                @foreach ($otherErrors as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <form action="{{ route('booking.store') }}" method="POST" class="space-y-4">
                         @csrf
                         <div>
