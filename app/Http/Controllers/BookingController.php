@@ -57,7 +57,7 @@ class BookingController extends Controller
         MetaHelper::flashEvent('Lead', $eventId, $customData);
         MetaHelper::flashUserData($userData);
 
-        return redirect()->back()->with('success_name', $validated['name']);
+        return redirect()->route('home')->with('success_name', $validated['name']);
     }
 
     public function trackContact(Request $request)
